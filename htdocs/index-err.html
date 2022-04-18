@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>MANGA</title>
+	<title>Error .:. MANGA</title>
 	<meta name="description" content="MANGA">
 	<meta name="viewport" content="width=device-width">
 
@@ -19,8 +19,8 @@
 	<link rel="stylesheet" href="/css/style.css?v1">
 
 
-	<link rel="preload" href="/css/fonts/BebasNeueBold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="/css/fonts/BebasNeueRegular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/BebasNeueBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/BebasNeueRegular.woff2" as="font" type="font/woff2" crossorigin>
 
 </head>
 
@@ -36,7 +36,7 @@
 					<div class="soon">Саундтрек</div>
 
 					<div class="audio">
-					<audio id="audio-top" src="/METAVERSE_TRACK.mp3" loop="loop"></audio>
+					<audio id="audio-top" src="METAVERSE_TRACK.wav" loop="loop"></audio>
 					<div id="controls-top" class="controls controls-top">
 						<div class="play-btns">
 							<button class="minus not-active">
@@ -77,7 +77,7 @@
 					<div class="title">Аудиосериал</div>
 				</div>
 				<div class="col-2 language-wrap">
-<!--					
+					
 					<a href="/en/index.html" class="language">
 						<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_26_485)">
@@ -91,9 +91,8 @@
 							</svg>
 						<span>ENG</span>
 					</a>
--->
 					<button class="volume-top">
-						<img src="images/volume-on.svg" alt="" class="volume-on" />
+						<img src="/images/volume-on.svg" alt="" class="volume-on" />
 						<img src="/images/volume-off.svg" alt="" class="volume-off d-none" />
 					</button>
 				</div>
@@ -216,44 +215,50 @@
 		</div>
 	</section>
 
-
 	<section class="transfer">
 		<div class="container">
-
 			<a href="#" class="down">
-
 				<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="23" cy="23.3896" r="22.5" fill="#EFEFEF"/>
 					<path d="M17.6328 21.8198L22.9998 27.1874L28.3674 21.8198" stroke="#4885ED" stroke-width="2"/>
 					</svg>
 					
 			</a>
-							<div id=tg_insert></div>
-
-
-			<div id=txt_comments class="d-none">
-			<div class="text" >Или Читай и слушай онлайн прямо сейчас</div>
+			<div class="text"><!--ERR_TEXT--></div>
+<!--
 			<div class="author">
 				<span>АВТОР</span> ОЛЕГ БАРД
 			</div>
-			</div>
-
+-->
 		</div>
 	</section>
 
 	<section class="middle">
 
 		<div class="text-block row">
+<!--
 			<div class="col-12 col-lg-3 titles-wrap">
-				<div class="titles-tab"></div>
+				<div class="titles-tab">
+					<a class="tab tab-1 active" href="#tab-1"><span>Аннотация</span></a>
+					<a class="tab tab-2 lock" href="#tab-2"><span>Глава 1</span></a>
+					<a class="tab tab-3 lock" href="#tab-3"><span>Глава 2</span></a>
+					<a class="tab tab-4 lock" href="#tab-4"><span>Глава 3</span></a>
+					<a class="tab tab-5 lock" href="#tab-5"><span>Глава 4</span></a>
+					<a class="tab tab-6 lock" href="#tab-6"><span>Глава 5</span></a>
+					<a class="tab tab-7 lock" href="#tab-7"><span>Глава 6</span></a>
+					<a class="tab tab-8 lock" href="#tab-8"><span>Глава 7</span></a>
+					<a class="tab tab-9 lock" href="#tab-9"><span>Глава 8</span></a>
+					<a class="tab tab-10 lock" href="#tab-10"><span>Глава 9</span></a>
+					<a class="tab tab-11 lock" href="#tab-11"><span>Глава 10</span></a>
+				</div>
 				
 			</div>
-
+-->
+<!--
 			<div class="col-12 col-lg-9">
 				<div class="tabs">
 					<div class="tab tab-1 active" id="tab-1">
 						<div class="text">
-
 							<strong>Точка бифуркации реальности:</strong>
 							<p>Осень 2008. Финансовый кризис. Доверия банкам больше нет. Но самые могущественные, одаренные и прогрессивные поняли это раньше. По инициативе Сергея Брина произошло слияние крупнейших корпораций: Meta, Amazon, Netflix, Google, Apple. Так родилась метакорпорация M.A.N.G. A.
 							</p>
@@ -271,7 +276,7 @@
 							<p>И однажды семена проклюнутся, падет завеса иллюзий и мир содрогнется…</p>
 						</div>
 
-						<div class="next-chapter d-none">
+						<div class="next-chapter">
 							<a href="#tab-2">
 								Следующая глава
 								<svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -565,19 +570,38 @@
 					
 				</div>
 				
+-->
+				<div class=" row open-telegram">
+					<div class="col-12 col-md-9">Чтобы получить доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
+					<div class="col-12 col-md-3 open-telegram__btn">
+						<a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
+							<img src="/images/telegram.svg" alt="telegram" />
+							Открыть
+						</a>
+					</div>
+				</div>
 				
 			</div>
 		</div>
-
+<!--
 		<div class="audio">
 			<div class="audio-track"><div class="time"></div></div>
-			<div class="audio_blk" id=audio_blk>
-			<audio id="playlist" tabindex="0">
+			<audio id="playlist" loop="loop" tabindex="0">
 				<source src="chapters/MANGA_Anons_MIX_Apple.mp3" data-track-number="1" />
     			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="2" />
     			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="3" />
+<! --
+    			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="4" />
+    			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="5" />    
+    			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="6" />
+    			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="7" />
+    			<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="8" />
+                <source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="9" />
+                <source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="10" />
+				<source src="chapters/JJ_-_Still_(Kazus_Remix).mp3" data-track-number="11" />
+-- >
 			</audio>
-			</div>
+
 			<div id="controls" class="controls controls-bottom">
 				<div class="audio-start">Аннотация</div>
 				<div class="play-btns">
@@ -631,14 +655,13 @@
 			</div>
 			
 		</div>
-		
+-->		
 	</section>
 	
 
 
 	<script src="/js/bootstrap.bundle.min.js"></script>
-	<script src="/js/script.js?v1"></script>
-	<script src="/js_mp3/"></script>
+<!--	<script src="/js/script.js?v1"></script>-->
 
 </body>
 </html>

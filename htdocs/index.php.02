@@ -92,7 +92,7 @@ foreach($mp3_mas as $n=>$v)
     //if($v == "")
     if($nn>1)
     $lock = "lock";
-    $t .= "<a id=atab$nn class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-$nn\"><span>$n</span></a>";
+    $t .= "<a class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-$nn\"><span>$n</span></a>";
 }
 $t .= "</div>";
 
@@ -119,9 +119,7 @@ $t .= "</audio>";
 $a = preg_replace($preg,$t,$a);
 
 
-$t = '                                
-		    <div id=tg_insert>
-					<div class=" row open-telegram">
+$t = '                                <div class=" row open-telegram">
                                         <div class="col-12 col-md-9">Чтобы получить доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
                                         <div class="col-12 col-md-3 open-telegram__btn">
                                                 <a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
@@ -129,9 +127,7 @@ $t = '
                                                         Открыть
                                                 </a>
                                         </div>
-					</div>
-		    </div>
-';
+					</div>';
 $a = str_replace("<div id=tg_insert></div>",$t,$a);
 
 

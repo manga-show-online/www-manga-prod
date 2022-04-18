@@ -216,28 +216,19 @@
 		</div>
 	</section>
 
-
 	<section class="transfer">
 		<div class="container">
-
 			<a href="#" class="down">
-
 				<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="23" cy="23.3896" r="22.5" fill="#EFEFEF"/>
 					<path d="M17.6328 21.8198L22.9998 27.1874L28.3674 21.8198" stroke="#4885ED" stroke-width="2"/>
 					</svg>
 					
 			</a>
-							<div id=tg_insert></div>
-
-
-			<div id=txt_comments class="d-none">
-			<div class="text" >Или Читай и слушай онлайн прямо сейчас</div>
+			<div class="text">Или Читай и слушай онлайн прямо сейчас</div>
 			<div class="author">
 				<span>АВТОР</span> ОЛЕГ БАРД
 			</div>
-			</div>
-
 		</div>
 	</section>
 
@@ -248,12 +239,11 @@
 				<div class="titles-tab"></div>
 				
 			</div>
-
 			<div class="col-12 col-lg-9">
 				<div class="tabs">
 					<div class="tab tab-1 active" id="tab-1">
 						<div class="text">
-
+							<div id=tg_insert></div>
 							<strong>Точка бифуркации реальности:</strong>
 							<p>Осень 2008. Финансовый кризис. Доверия банкам больше нет. Но самые могущественные, одаренные и прогрессивные поняли это раньше. По инициативе Сергея Брина произошло слияние крупнейших корпораций: Meta, Amazon, Netflix, Google, Apple. Так родилась метакорпорация M.A.N.G. A.
 							</p>
@@ -271,7 +261,7 @@
 							<p>И однажды семена проклюнутся, падет завеса иллюзий и мир содрогнется…</p>
 						</div>
 
-						<div class="next-chapter d-none">
+						<div class="next-chapter">
 							<a href="#tab-2">
 								Следующая глава
 								<svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">

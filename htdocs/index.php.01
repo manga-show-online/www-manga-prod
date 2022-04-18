@@ -89,52 +89,13 @@ foreach($mp3_mas as $n=>$v)
 {
     $nn++;
     $lock = "";
-    //if($v == "")
-    if($nn>1)
-    $lock = "lock";
-    $t .= "<a id=atab$nn class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-$nn\"><span>$n</span></a>";
+    if($v == "")$lock = "lock";
+    $t .= "<a class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-#nn\"><span>$n</span></a>";
 }
 $t .= "</div>";
 
 $a = str_replace("<div class=\"titles-tab\"></div>",$t,$a);
-$preg = "/\<audio id\=\"playlist\".*?\<\/audio\>/sim";
-
-
-$t = "";
-$t .= "<audio id=\"playlist\" tabindex=\"0\">";
-
-reset($mp3_mas);
-$nn = 0;
-foreach($mp3_mas as $n=>$v)
-{
-    if($v)
-    {
-    $nn++;
-    $t .= "<source src=\"".$mp3_domen."$nn\" data-track-number=\"$nn\" />";
-    }
-}
-
-$t .= "</audio>";
-
-$a = preg_replace($preg,$t,$a);
-
-
-$t = '                                
-		    <div id=tg_insert>
-					<div class=" row open-telegram">
-                                        <div class="col-12 col-md-9">Чтобы получить доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
-                                        <div class="col-12 col-md-3 open-telegram__btn">
-                                                <a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
-                                                        <img src="/images/telegram.svg" alt="telegram" />
-                                                        Открыть
-                                                </a>
-                                        </div>
-					</div>
-		    </div>
-';
-$a = str_replace("<div id=tg_insert></div>",$t,$a);
-
-
+//$preg = "";
 print $a;
 //	    print "<script>";
 //	    print "console.log(localStorage.getItem('$key_name'));";
