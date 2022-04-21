@@ -81,6 +81,23 @@ switch($item)
 $f = "index.html";
 $a = file_get_contents($f);
 
+
+$a = str_replace(" href=\"fonts/"," href=\"/fonts/",$a);
+$a = str_replace(" href=\"favicon/"," href=\"/favicon/",$a);
+$a = str_replace(" href=\"fonts/"," href=\"/fonts/",$a);
+$a = str_replace(" href=\"css/"," href=\"/css/",$a);
+$a = str_replace(" src=\"images/"," src=\"/images/",$a);
+$a = str_replace("</body>"," <script src=\"/js_mp3/\"></script>\n</body>",$a);
+
+$a = str_replace('<a href="/en/index.html" class="language">','<a href="/en/index.html" class="language d-none">',$a);
+
+$a = str_replace("<audio id=\"audio-top\"","<div><audio id=\"audio-top\"",$a);
+$a = str_replace("<audio id=\"playlist\"","<div class=\"audio_blk\" id=audio_blk><audio id=\"playlist\"",$a);
+$a = str_replace("</audio>","</audio></div>",$a);
+
+$a = str_replace("src=\"METAVERSE_TRACK.wav\"","src=\"/METAVERSE_TRACK.mp3\"",$a);
+
+
 reset($mp3_mas);
 $t = "";
 $nn = 0;
@@ -96,7 +113,11 @@ foreach($mp3_mas as $n=>$v)
 }
 $t .= "</div>";
 
-$a = str_replace("<div class=\"titles-tab\"></div>",$t,$a);
+$preg = "/\<div class\=\"titles-tab\"\>(.*?)\<\/div\>/sim";
+//$a = str_replace("<div class=\"titles-tab\"></div>",$t,$a);
+$s = "<div class=\"titles-tab\">$t</div>";
+$a = preg_replace($preg,$s,$a);
+
 $preg = "/\<audio id\=\"playlist\".*?\<\/audio\>/sim";
 
 
