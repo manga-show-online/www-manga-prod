@@ -97,7 +97,8 @@ $a = str_replace("<audio id=\"audio-top\"","<div><audio id=\"audio-top\"",$a);
 $a = str_replace("<audio id=\"playlist\"","<div class=\"audio_blk\" id=audio_blk><audio id=\"playlist\"",$a);
 $a = str_replace("</audio>","</audio></div>",$a);
 
-$a = str_replace("src=\"METAVERSE_TRACK.wav\"","src=\"/METAVERSE_TRACK.mp3\"",$a);
+//$a = str_replace("src=\"METAVERSE_TRACK.wav\"","src=\"/METAVERSE_TRACK.mp3\"",$a);
+$a = str_replace("src=\"METAVERSE_TRACK.mp3\"","src=\"/chapters/METAVERSE_TRACK.mp3\"",$a);
 
 $f = __DIR__."/js/script.js";
 $ftime = filemtime($f);
@@ -164,7 +165,7 @@ $t = '
 					</div>
 		    </div>
 ';
-$a = str_replace("<div id=tg_insert></div>",$t,$a);
+$a = str_replace("<div id=\"tg_insert\"></div>",$t,$a);
 
 
 print $a;

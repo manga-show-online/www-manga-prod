@@ -70,6 +70,7 @@ if(mp3_hash == null)
 {
 audio_data = no_auth();
 //console.log(1);
+document.getElementById('txt_comments').className = 'd-none';
 }
 else
 {
