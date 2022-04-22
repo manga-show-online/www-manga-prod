@@ -23,14 +23,34 @@ foreach($mp3_mas as $n=>$v)
     {
     print "document.getElementById('atab$nn').className = 'tab tab-$nn';";
     print "t += '<source src=\"".$mp3_domen."'+mp3_hash+'/$nn/?".time()."\" data-track-number=\"$nn\" />';\n";
+//    print "t += '<source src=\"".$mp3_domen."'+mp3_hash+'/$nn/".time()."/listen_$nn.mp3\" data-track-number=\"$nn\" />';\n";
     }
+
 }
 
 print "t += '</audio>'\n";
+/*
+print "
+var x = document.getElementsByClassName('full_read');
+var l = x.length;
+for(var i=0;i<l;i++)
+{
+    console.log(x[i]);
+    x[i].className = '';
+//    x[i].className = '';
+}
+//x.removeClass('d-none');
+//document.querySelector(\".full_read\").classList.remove('d-none');
+//console.log(x);
+return t;
+}
+";
+*/
 print "
 return t;
 }
 ";
+
 ?>
 
     

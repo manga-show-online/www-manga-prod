@@ -556,11 +556,19 @@
 	
 	<script>
 		var domain = 'manga-show.online';
+/*
 		var initVolume = 60; // value from 0 to 100
 		var initShuffle = 0; // value 0 - off or 1 - on
 		var initRepeat = 1; // value 0 - off or 1 - on
 		var initRepeatSingle = 0; // value 0 - off or 1 - on
 		var initSpeed = 1.5; //value 1, 1.5, 2
+*/
+		var initVolume 		= localStorage.getItem('initVolume')?localStorage.getItem('initVolume'):100; // value from 0 to 100
+		var initShuffle 	= localStorage.getItem('initShuffle')?localStorage.getItem('initShuffle'):0; // value 0 - off or 1 - on
+		var initRepeat 		= localStorage.getItem('initRepeat')?localStorage.getItem('initRepeat'):1; // value 0 - off or 1 - on
+		var initRepeatSingle 	= localStorage.getItem('initRepeatSingle')?localStorage.getItem('initRepeatSingle'):0;; // value 0 - off or 1 - on
+		var initSpeed 		= localStorage.getItem('initSpeed')?localStorage.getItem('initSpeed'):1;; //value 1, 1.5, 2
+
 	</script>
 
 	<script src="js/bootstrap.bundle.min.js"></script>

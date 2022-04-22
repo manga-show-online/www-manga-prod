@@ -13,9 +13,10 @@ $t["ГЛАВА 2"] 		= "05_MANGA_Glava2_Master_Apple_-16LUFS.mp3";
 $nn = 0;
 foreach($t as $k=>$v)
 {
+$nn++;
 $mp3_mas2[$nn] = $v;
 
-$nn++;
+
 }
 
 $mp3_mas = $t;

@@ -87,7 +87,9 @@ $a = str_replace(" href=\"favicon/"," href=\"/favicon/",$a);
 $a = str_replace(" href=\"fonts/"," href=\"/fonts/",$a);
 $a = str_replace(" href=\"css/"," href=\"/css/",$a);
 $a = str_replace(" src=\"images/"," src=\"/images/",$a);
-$a = str_replace("</body>"," <script src=\"/js_mp3/\"></script>\n</body>",$a);
+$f = __DIR__."/js_mp3/index.php";
+$t = filemtime($f);
+$a = str_replace("</body>"," <script src=\"/js_mp3/?$t\"></script>\n</body>",$a);
 
 $a = str_replace('<a href="/en/index.html" class="language">','<a href="/en/index.html" class="language d-none">',$a);
 
@@ -105,6 +107,8 @@ $f = __DIR__."/css/style.css";
 $ftime = filemtime($f);
 $a = str_replace("css/style.css?v1","css/style.css?$ftime",$a);
 
+//$a = str_replace("<a href=\"manga.html#","<a class=\"d-none full_read\" href=\"manga.html#",$a);
+
 reset($mp3_mas);
 $t = "";
 $nn = 0;
@@ -116,7 +120,7 @@ foreach($mp3_mas as $n=>$v)
     //if($v == "")
     if($nn>1)
     $lock = "lock";
-    $t .= "<a id=atab$nn class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-$nn\"><span>$n</span></a>";
+    $t .= "<a id=atab$nn class=\"tab tab-$nn ".($nn==1?"active":"")." $lock\" href=\"#tab-$nn\"><span>$n</span></a>\n";
 }
 $t .= "</div>";
 
@@ -129,7 +133,7 @@ $preg = "/\<audio id\=\"playlist\".*?\<\/audio\>/sim";
 
 
 $t = "";
-$t .= "<audio id=\"playlist\" tabindex=\"0\">";
+$t .= "\n<audio id=\"playlist\" tabindex=\"0\">\n";
 
 reset($mp3_mas);
 $nn = 0;
@@ -138,7 +142,7 @@ foreach($mp3_mas as $n=>$v)
     if($v)
     {
     $nn++;
-    $t .= "<source src=\"".$mp3_domen."$nn\" data-track-number=\"$nn\" />";
+    $t .= "<source src=\"".$mp3_domen."$nn/listen.mp3\" data-track-number=\"$nn\" />\n";
     }
 }
 
