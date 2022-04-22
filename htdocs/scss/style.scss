@@ -927,6 +927,10 @@ footer {
     border-top: 1px solid #DADADA;
     position: relative;
     text-align: center;
+    margin-bottom: 50px;
+    @media (max-width: 500px) {
+        margin-bottom: 30px;
+    }
     & .down {
         position: absolute;
         z-index: 2;
@@ -960,7 +964,7 @@ footer {
         }
     }
     & .author {
-        margin-bottom: 50px;
+        margin-bottom: 0;
         background: #F7F7F7;
         border-radius: 5px;
         font-weight: 400;
@@ -974,7 +978,7 @@ footer {
         padding: 0 8px;
         display: inline-block;
         @media (max-width: 500px) {
-            margin-bottom: 30px;
+            margin-bottom: 0;
             font-size: 16px;
             height: 40px;
             line-height: 40px;
@@ -1401,5 +1405,21 @@ button.rand {
     &.active path {
         fill: #000000;
         transition: 0.5s;
+    }
+}
+
+.authors {
+    justify-content: center;
+    flex-wrap: wrap;
+    & .author {
+        margin: 2px 10px;
+    }
+}
+
+.book {
+    margin: 80px 0;
+    & h2 {
+        color: #DB3236;
+        margin-bottom: 30px;
     }
 }

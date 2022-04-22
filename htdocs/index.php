@@ -97,6 +97,13 @@ $a = str_replace("</audio>","</audio></div>",$a);
 
 $a = str_replace("src=\"METAVERSE_TRACK.wav\"","src=\"/METAVERSE_TRACK.mp3\"",$a);
 
+$f = __DIR__."/js/script.js";
+$ftime = filemtime($f);
+$a = str_replace("js/script.js?v1","js/script.js?$ftime",$a);
+
+$f = __DIR__."/css/style.css";
+$ftime = filemtime($f);
+$a = str_replace("css/style.css?v1","css/style.css?$ftime",$a);
 
 reset($mp3_mas);
 $t = "";

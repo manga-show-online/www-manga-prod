@@ -383,6 +383,7 @@ window.onload = function() {
         srcTrack = srcTrack.getAttribute('src');
         audio2.src = srcTrack;
         audio2.currentTime = 0;
+        audio2.playbackRate = rate.getAttribute('data-rate');
         audio2.play();
         
     }
@@ -408,7 +409,7 @@ window.onload = function() {
         }
         this.setAttribute('data-rate', rateNum);
         rate.innerHTML = rateNum + 'x';
-        audio2.playbackRate =rateNum;
+        audio2.playbackRate = rateNum;
     });
    
 
@@ -424,6 +425,7 @@ window.onload = function() {
             srcTrack = srcTrack.getAttribute('src');
             audio2.src = srcTrack;
             audio2.currentTime = 0;
+            audio2.playbackRate = rate.getAttribute('data-rate');
             btnPlay2.classList.remove('d-none');
             btnPause2.classList.add('d-none');
             minus10.classList.add('not-active');
@@ -466,9 +468,29 @@ window.onload = function() {
                 tabText[m].classList.remove('active');
             }
         }
+        document.title = tabs[i].innerText.toUpperCase() + ' .:. ' + domain.toUpperCase();
     }
 
-    
-
+    //get url & change tab
+    let hashID = document.location.hash;
+    for (let i=0; i<tabs.length;i++) {
+        let hrefTab = tabs[i].getAttribute('href');
+        if(hrefTab == hashID) {
+            let n = i;
+            ++n;
+            changeTab(i);
+            let srcTrack = document.querySelector('source[data-track-number="' + n + '"]');
+            treck = --n;
+            srcTrack = srcTrack.getAttribute('src');
+            audio2.src = srcTrack;
+            audio2.currentTime = 0;
+            audio2.playbackRate = rate.getAttribute('data-rate');
+            btnPlay2.classList.remove('d-none');
+            btnPause2.classList.add('d-none');
+            minus10.classList.add('not-active');
+            plus10.classList.add('not-active');
+            return false;
+        }
+    }
  
 }
