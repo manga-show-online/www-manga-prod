@@ -193,6 +193,7 @@ window.onload = function() {
             repeatBtn.classList.remove('not-active');
             repeatBtn.classList.add('active');
             randBtn.classList.remove('not-active');
+            localStorage.setItem('initRepeat', 1);
         } else {
             repeatBtn.classList.add('not-active');
             repeatBtn.classList.remove('active');
@@ -200,6 +201,7 @@ window.onload = function() {
             repeatBtnSingle.classList.add('d-none');
             randBtn.classList.add('not-active');
             randBtn.classList.remove('active');
+            localStorage.setItem('initRepeat', 0);
         }
      }
 
@@ -214,6 +216,7 @@ window.onload = function() {
         repeatBtnSingle.classList.add('active');
         repeatBtn.classList.add('d-none');
         repeatTrack = true;
+        localStorage.setItem('initRepeatSingle', 1);
      });
 
      repeatBtnSingle.addEventListener('click', function() {
@@ -222,15 +225,18 @@ window.onload = function() {
         repeatBtnSingle.classList.remove('active');
         repeatBtn.classList.remove('d-none');
         repeatBtn.classList.add('active');
+        localStorage.setItem('initRepeatSingle', 0);
      });
 
      randBtn.addEventListener('click', function() {
         if(randTrack) {
             randTrack = false;
             randBtn.classList.remove('active');
+            localStorage.setItem('initShuffle', 0);
         } else {
             randTrack = true;
             randBtn.classList.add('active');
+            localStorage.setItem('initShuffle', 1);
         }
      });
 
@@ -365,6 +371,7 @@ window.onload = function() {
         let current = this.value;
         audio2.volume = current/100;
         rangeLine.style.width = current + '%';
+        localStorage.setItem('initVolume', current);
     }
 
     timeLine.onchange = function(){
@@ -410,6 +417,7 @@ window.onload = function() {
         this.setAttribute('data-rate', rateNum);
         rate.innerHTML = rateNum + 'x';
         audio2.playbackRate = rateNum;
+        localStorage.setItem('initSpeed', rateNum);
     });
    
 
