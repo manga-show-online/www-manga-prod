@@ -463,7 +463,7 @@ window.onload = function() {
 
     function changeTab(i) {
         tabs[i].classList.add('active');
-        
+        tabText[i].classList.add('active');
         let text = tabs[i].innerHTML;
         startText.innerHTML = text;
         for (let m=0; m<tabs.length;m++) {
@@ -471,15 +471,11 @@ window.onload = function() {
                 tabs[m].classList.remove('active');
             }
         }
-        if(tabText[i]) {
-            tabText[i].classList.add('active');
-            for (let m=0; m<tabText.length;m++) {
-                if(i != m) {
-                    tabText[m].classList.remove('active');
-                }
+        for (let m=0; m<tabText.length;m++) {
+            if(i != m) {
+                tabText[m].classList.remove('active');
             }
-        } 
-        
+        }
         document.title = tabs[i].innerText.toUpperCase() + ' .:. ' + domain.toUpperCase();
     }
 
