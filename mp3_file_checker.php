@@ -1,5 +1,6 @@
 #!/usr/bin/php
 <?php
+error_reporting(0);
 include "mp3.php";
 
 $d = __DIR__;
@@ -19,3 +20,4 @@ foreach($mp3_mas2 as $k=>$v)
     print $f."\t";
     print "\n";
 }
+print_r($mp3_mas2);
