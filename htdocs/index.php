@@ -155,7 +155,7 @@ $a = preg_replace($preg,$t,$a);
 $t = '                                
 		    <div id=tg_insert>
 					<div class=" row open-telegram">
-                                        <div class="col-12 col-md-9">Чтобы получить доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
+                                        <div class="col-12 col-md-9">Чтобы получить <B>БЕСПЛАТНЫЙ</B> доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
                                         <div class="col-12 col-md-3 open-telegram__btn">
                                                 <a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
                                                         <img src="/images/telegram.svg" alt="telegram" />

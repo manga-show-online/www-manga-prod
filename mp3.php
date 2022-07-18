@@ -25,6 +25,12 @@ $a = "
 ИНТЕРЛЮДИЯ 5	08_MANGA_VSTAVKA-5-Apple.mp3	
 ГЛАВА 4		09_MANGA_Glava4_Master_Apple_-16LUFS.mp3
 ГЛАВА 5		10_MANGA_Glava5_Master_Apple_-16LUFS_OK.mp3
+ГЛАВА 6		11_MANGA_Glava6_Master_Apple_-16LUFS.mp3
+ГЛАВА 7		12_MANGA_Glava7_Master_Apple_-16LUFS.mp3
+ГЛАВА 8		13_MANGA_Glava8_Master_Apple_-16LUFS.mp3
+ГЛАВА 9		14_MANGA_Glava9_Master_Apple_-16LUFS.mp3
+ГЛАВА 10	15_MANGA_Glava10_Master_Apple_Spotyfy-16LUFS-1TP.mp3
+ГЛАВА 11	16_MANGA_Glava11_Master_Apple_Spotify-16LUFS-1TP.mp3
 ";
 $a = trim($a);
 $mas = explode("\n",$a);

@@ -277,7 +277,6 @@ window.onload = function() {
                     if(randTrack) {
                         treck = getRandomInt(total);
                         switchTreck(treck);
-                        changeHash(treck);
                     } else {
                         if(treck < total) {
                             treck++;
@@ -285,7 +284,6 @@ window.onload = function() {
                             treck = 0;
                         }
                         switchTreck(treck);
-                        changeHash(treck);
                     }
                 }
                 
@@ -338,7 +336,6 @@ window.onload = function() {
             treck = 0; 
             switchTreck(treck);
         }
-        changeHash(treck);
     });
 
     btnRatePrev.addEventListener("click", function() {
@@ -349,17 +346,7 @@ window.onload = function() {
             treck = total; 
             switchTreck(treck);
         }
-        changeHash(treck);
     });
-
-    function changeHash(treck) {
-        let href = tabs[treck].getAttribute('href');
-        let hash = location.protocol+'//'+
-        location.host+
-        location.pathname+
-        href;
-        history.replaceState({}, '', hash);
-    }
 
 
     btnVolume.addEventListener("click", function() {
