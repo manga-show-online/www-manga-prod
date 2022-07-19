@@ -1819,4 +1819,18 @@ button.rand.active path {
   color: #DB3236;
   margin-bottom: 30px;
 }
+
+.video-bl {
+  margin: 50px 0;
+}
+
+.video-bl iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .video-bl iframe {
+    height: 280px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

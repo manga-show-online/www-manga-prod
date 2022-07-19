@@ -152,7 +152,13 @@ $t .= "</audio>";
 $a = preg_replace($preg,$t,$a);
 
 
-$t = '                                
+$t = '';
+if($item == "main")$t .= '
+            <div class="video-bl">
+                <iframe width="772" height="435" src="https://www.youtube.com/embed/tIf5eEj01ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+';
+$t .= '                                
 		    <div id=tg_insert>
 					<div class=" row open-telegram">
                                         <div class="col-12 col-md-9">Чтобы получить <B>БЕСПЛАТНЫЙ</B> доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
@@ -165,6 +171,9 @@ $t = '
 					</div>
 		    </div>
 ';
+
+
+
 $a = str_replace("<div id=\"tg_insert\"></div>",$t,$a);
 
 
