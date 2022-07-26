@@ -31,6 +31,8 @@ $a = "
 ГЛАВА 9		14_MANGA_Glava9_Master_Apple_-16LUFS.mp3
 ГЛАВА 10	15_MANGA_Glava10_Master_Apple_Spotyfy-16LUFS-1TP.mp3
 ГЛАВА 11	16_MANGA_Glava11_Master_Apple_Spotify-16LUFS-1TP.mp3
+ГЛАВА 12	17_MANGA_Glava12_Master_Apple_Spotify-16LUFS-1TP_NO_PART2.mp3
+ГЛАВА 13	18_MANGA_Glava13_Master_Apple_Spotify-16LUFS-1TP.mp3
 ";
 $a = trim($a);
 $mas = explode("\n",$a);
