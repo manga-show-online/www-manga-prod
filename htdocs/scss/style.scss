@@ -1186,8 +1186,22 @@ footer {
         letter-spacing: 0.03em;
         color: $black;
         @media (max-width: 767px) {
-            text-align: center;
             font-size: 16px;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: #878787;
+            margin-bottom: 2px;
+            text-align: left;
+        }
+        & .uppercase {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            color: #000000;
         }
     }
     &__btn {

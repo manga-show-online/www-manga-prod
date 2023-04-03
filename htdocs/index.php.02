@@ -158,30 +158,10 @@ if($item == "main")$t .= '
                 <iframe width="772" height="435" src="https://www.youtube.com/embed/tIf5eEj01ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 ';
-if(1)
 $t .= '                                
 		    <div id=tg_insert>
 					<div class=" row open-telegram">
                                         <div class="col-12 col-md-9">Чтобы получить <B>БЕСПЛАТНЫЙ</B> доступ к полной версии аудиосериала, перейдите в наш телеграмм бот</div>
-                                        <div class="col-12 col-md-3 open-telegram__btn">
-                                                <a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
-                                                        <img src="/images/telegram.svg" alt="telegram" />
-                                                        Открыть
-                                                </a>
-                                        </div>
-					</div>
-		    </div>
-';
-if(0)
-$t .= '                                
-		    <div id=tg_insert>
-					<div class=" row open-telegram">
-                                        <div class="col-12 col-md-9">
-                                       <p>
-                                               <span class="uppercase">Получи доступ к сериалу, подпишись на telegram-каналы</span>
-                                       </p>
-                                       <p>Чтобы поддержать нас, подпишитесь на телеграм каналы, чтобы мы и дальше могли предоставлять контент для Вас</p>
-					</div>
                                         <div class="col-12 col-md-3 open-telegram__btn">
                                                 <a href=http://t.me/manga_online_bot class="btn btn-telegram" target=tg>
                                                         <img src="/images/telegram.svg" alt="telegram" />
